@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+ddns_updater.log
+ddns_updater.log.bkp
