@@ -1,7 +1,7 @@
-import threading
-import requests
 import logging
 import time
+
+import httpx
 from datetime import datetime
 from datetime import timedelta
 
@@ -51,7 +51,7 @@ def update_dns(client: Cloudflare):
             continue
 
         logger.info(f"item.id: {item.id}")
-        ip6_resp = requests.get(
+        ip6_resp = httpx.get(
             "http://6.ipw.cn",
             proxies={"http": None, "https": None},  # type: ignore
         )
