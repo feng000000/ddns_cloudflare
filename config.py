@@ -12,4 +12,6 @@ class Config(BaseSettings):
     DOMAIN_NAME: str
     RECORD_NAME: str
 
+    TEST_SERVER_PORT: int = 5001
+
 config = Config()  # type: ignore

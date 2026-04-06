@@ -3,6 +3,8 @@ import threading
 from flask import Flask
 from flask import request
 
+from config import config
+
 def run_test_server():
     server_t = threading.Thread(target=_test_server)
     server_t.daemon = True
@@ -23,4 +25,4 @@ def _test_server():
         )
         return "pong"
 
-    app.run(host="::", port=5000, debug=False)
+    app.run(host="::", port=config.TEST_SERVER_PORT, debug=False)

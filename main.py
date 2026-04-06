@@ -94,7 +94,7 @@ def update_loop():
 
         logger.error(
             f"update dns success: {config.RECORD_NAME}\n"
-            f"request http://{config.RECORD_NAME}:5000/ping to check"
+            f"request http://{config.RECORD_NAME}:{config.TEST_SERVER_PORT}/ping to check"
         )
 
         next_run = datetime.now() + timedelta(seconds=300)
